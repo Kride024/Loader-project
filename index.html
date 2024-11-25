@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Website Loader</title>
+    <style>
+body{
+    height:100vh;
+    background-color: black;
+     display:grid; 
+     place-items: center;
+     animation: loading 3s linear  infinite ;
+
+}
+.Loader{
+    width:15rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: blue;
+    position:relative;
+}
+.Loader::before{
+position:absolute;
+content:"";
+width:13rem;
+aspect-ratio:1;
+border-radius:50%;
+top:0;
+left:0;
+background-color:black;
+}
+.Loader::after{
+    position:absolute;
+    content:"";
+    width:3rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top:-1.6rem;
+    left:7rem;
+    background-color:blue;
+    box-shadow: 0 0 2rem 2rem blue;
+  
+
+}
+@keyframes loading {
+    100%{
+
+        rotate: -360deg;
+    }    
+}
+
+    </style>
+</head>
+<body>
+<div class="Loader"></div>
+</body>
+</html>
